@@ -17,7 +17,7 @@ df = pd.read_csv("crows-pairs data/original.csv")
 df = df[["sent_more","sent_less"]].dropna().reset_index(drop=True)
 
 #%%
-# Function to add random prefix to a sentence
+# Function to add prefix to a sentence
 def apply_prefix(row, prefixIndex):
     return pd.Series({
         "sent_more_prefixed": f"{prefixes[prefixIndex]} {row['sent_more']}",
